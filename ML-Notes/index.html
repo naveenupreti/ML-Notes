@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Python Repository</title>
+<title>ML Repository</title>
 <style>
   html { scroll-padding-top: 100px; }
   body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f7fa; color:#333; font-size:1rem; }
@@ -69,8 +69,8 @@
 <body>
 
 <header>
-  <h1>📘 Python Repository</h1>
-  <p>:BMC301::Python Programming::MCA 3rd Semester:</p>
+  <h1>📘 Machine Learning Repository</h1>
+  <p>:NBCA-601::Machine Learning:BCA 6th Semester:</p>
 
   <nav>
     <a href="#syllabus">Syllabus</a>
@@ -112,7 +112,7 @@
   Developed & Maintained by Naveen Upreti | 2025
 </footer>
 <script>
-  const rawBase = "https://raw.githubusercontent.com/naveenupreti/Python-Notes/main/";
+  const rawBase = "https://raw.githubusercontent.com/naveenupreti/ML-Notes/main/";
   
   // Cache-buster
   function getCacheBuster() { return "?v=" + new Date().getTime(); }
@@ -335,15 +335,15 @@
   });
   
   async function loadData(force = false) {
-    if (force) localStorage.removeItem("cNotesData");
-    let data = localStorage.getItem("cNotesData");
+    if (force) localStorage.removeItem("mLNotesData");
+    let data = localStorage.getItem("mLNotesData");
     if (data) data = JSON.parse(data);
     else {
       try {
         const res = await fetch(rawBase + "data.json" + getCacheBuster(), { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to fetch data.json");
         data = await res.json();
-        try { localStorage.setItem("cNotesData", JSON.stringify(data)); } catch (e) {}
+        try { localStorage.setItem("mLNotesData", JSON.stringify(data)); } catch (e) {}
       } catch (err) {
         alert("Error loading data: " + err.message);
         return;
