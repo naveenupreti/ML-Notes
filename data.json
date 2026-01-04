@@ -1,90 +1,32 @@
 {
   "syllabus": [
     { "path": "Syllabus/MCA 2nd Year Syllabus 2025-26.pdf" },
-    { "path": "Syllabus/BMC301_351_Python_Programming_Syllabus_MCA_3rd_Sem.pdf" },
-    { "path": "Syllabus/Python_Programming_Syllabus_MCA_3rd_Sem.docx", "hidden": true }
-  ],
+      ],
   "notes_programs": {
     "UNIT-1": [
       { "path": "Notes_Programs/UNIT-1/LUP_Chapter1_Introduction.pdf" },
-      { "path": "Notes_Programs/UNIT-1/LUP_Chapter2_Installation.pdf" },
-      { "path": "Notes_Programs/UNIT-1/LUP_Chapter3_DataTypesOperatos.pdf" },
-      { "path": "Notes_Programs/UNIT-1/LUP_Chapter5_ControlStatements.pdf" },
-      { "path": "Notes_Programs/UNIT-1/LUP_Chapter6_Loops.pdf" },
-      { "path": "Notes_Programs/UNIT-1/LUP_Chapter7_ConsoleIO.pdf" },
-      { "path": "Notes_Programs/UNIT-1/LUP_PrecedenceTable.pdf" },
-      { "path": "Notes_Programs/UNIT-1/Python_History_Features_Distros_CodingStandards-PEP8.pdf" },
-      { "path": "Notes_Programs/UNIT-1/BasicStructure.py" },
-      { "path": "Notes_Programs/UNIT-1/control_statements.py" },
-      { "path": "Notes_Programs/UNIT-1/datatypes_python.py" },
-      { "path": "Notes_Programs/UNIT-1/file1.py" },
-      { "path": "Notes_Programs/UNIT-1/file2.py" },
-      { "path": "Notes_Programs/UNIT-1/operators_demo_with_output.py" },
-      { "path": "Notes_Programs/UNIT-1/precedence_associativity.py" },
-      { "path": "Notes_Programs/UNIT-1/print_formatting.py" },
-      { "path": "Notes_Programs/UNIT-1/short_circuit_operators.py" },
-      { "path": "Notes_Programs/UNIT-1/use_of_main.py" },
-      { "path": "Notes_Programs/UNIT-1/variables.py" },
       { "path": "Notes_Programs/UNIT-1/test.py", "hidden": true }
     ],
     "UNIT-2": [
-      { "path": "Notes_Programs/UNIT-2/LUP_Chapter10_Sets.pdf" },
-      { "path": "Notes_Programs/UNIT-2/LUP_Chapter4_Strings.pdf" },
-      { "path": "Notes_Programs/UNIT-2/LUP_Chapter8_Lists.pdf" },
-      { "path": "Notes_Programs/UNIT-2/LUP_Chapter9_Tuples.pdf" },
       { "path": "Notes_Programs/UNIT-2/String_python.py" },
       { "path": "Notes_Programs/UNIT-2/string_alignment.py" },
       { "path": "Notes_Programs/UNIT-2/string_palindrome.py" },
       { "path": "Notes_Programs/UNIT-2/strings_lup.py", "hidden": true }
     ],
     "UNIT-3": [
-      { "path": "Notes_Programs/UNIT-3/LUP_Chapter11_Dictionaries.pdf" },
-      { "path": "Notes_Programs/UNIT-3/LUP_Chapter13_Functions.pdf" },
-      { "path": "Notes_Programs/UNIT-3/LUP_Chapter14_Recursion.pdf" },
-      { "path": "Notes_Programs/UNIT-3/lists_lup.py" },
-      { "path": "Notes_Programs/UNIT-3/tuples_lup.py", "hidden": true },
-      { "path": "Notes_Programs/UNIT-3/dictionary_lup.py" },
-      { "path": "Notes_Programs/UNIT-3/scope_variable.py" },
-      { "path": "Notes_Programs/UNIT-3/scope_LEGB.py" },
-      { "path": "Notes_Programs/UNIT-3/scope_LEGB1.py" },
       { "path": "Notes_Programs/UNIT-3/recursion_types.py" },
       { "path": "Notes_Programs/UNIT-3/recursion_even_odd.py" }
     ],
     "UNIT-4": [
-      { "path": "Notes_Programs/UNIT-4/LUP_Chapter16_ModulesAndPackages.pdf" },
-      { "path": "Notes_Programs/UNIT-4/LUP_Chapter23_FileHandling.pdf" },
-      { "path": "Notes_Programs/UNIT-4/test.py" },
-      { "path": "Notes_Programs/UNIT-4/random_module_demo.py" },
-      { "path": "Notes_Programs/UNIT-4/random_excluding_a_range.py" },
-      { "path": "Notes_Programs/UNIT-4/random_deck_of_cards_generator.py"},
-      { "path": "Notes_Programs/UNIT-4/random_password_generator_user_choice.py" },
-      { "path": "Notes_Programs/UNIT-4/file_handling.py" },
-      { "path": "Notes_Programs/UNIT-4/file_modes_all.py" },
-      { "path": "Notes_Programs/UNIT-4/file_read_write_rename_delete.py" },
-      { "path": "Notes_Programs/UNIT-4/file_non_string_data_binary.py", "hidden": true},
-      { "path": "Notes_Programs/UNIT-4/file_non_string_read_write.py"},
-      { "path": "Notes_Programs/UNIT-4/file_pickle_all_datatypes.py"},
-      { "path": "Notes_Programs/UNIT-4/file_copy_binary.py" },
-      { "path": "Notes_Programs/UNIT-4/file_copy_binary_cla.py" },
-      { "path": "Notes_Programs/UNIT-4/file_type_copy.py", "hidden": true},
-      { "path": "Notes_Programs/UNIT-4/file_type_copy1.py", "hidden": true},
-      { "path": "Notes_Programs/UNIT-4/file_handling_text_json_csv.py" },
       { "path": "Notes_Programs/UNIT-4/imports.py" },
       { "path": "Notes_Programs/UNIT-4/modules.py" }
   
     ],
     "UNIT-5": [
-      { "path": "Notes_Programs/UNIT-5/LUP_Chapter22_ExceptionHandling.pdf" },
-      { "path": "Notes_Programs/UNIT-5/exception_handling.py" },
-      { "path": "Notes_Programs/UNIT-5/numpy_demo.py" },
-      { "path": "Notes_Programs/UNIT-5/pandas_demo.py"},
-      { "path": "Notes_Programs/UNIT-5/pandas_loc_iloc.py"},
-      { "path": "Notes_Programs/UNIT-5/pandas_data_cleaning_merging.py"},
       { "path": "Notes_Programs/UNIT-5/datetime_demo.py"}
     ]
   },
   "assignments": [
-    { "path": "Assignments/MCA_3rd_Sem_BMC301_351_Python_Assignments.pdf" },
     { "path": "Assignments/PythonLabAssignments_BMC351.pdf"},
     { "path": "Assignments/FrontPageBMC351PracticalFile.pdf"}
   ],
