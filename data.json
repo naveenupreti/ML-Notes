@@ -27,8 +27,7 @@
     ]
   },
   "assignments": [
-    { "path": "Assignments/PythonLabAssignments_BMC351.pdf"},
-    { "path": "Assignments/FrontPageBMC351PracticalFile.pdf"}
+    { "path": "Assignments/PythonLabAssignments_BMC351.pdf"}
   ],
   "ebooks": [
     { "path": "ebooks/HowToThinkLikeComputerScientistUsingPython3.pdf" },
@@ -37,19 +36,10 @@
     { "path": "ebooks/LUP_ChasingTheBugs.pdf" },
     { "path": "ebooks/LUP_DebuggingInPython.pdf" },
     { "path": "ebooks/LUP_PrecedenceTable.pdf" },
-    { "path": "ebooks/Let-Us-Python-by-yashavant-kanetkar-pdfcoffee.com.pdf" },
     { "path": "ebooks/Let Us Python by Yashavant Kanetkar Aditya Kanetkar_compressed.pdf" },
     { "path": "ebooks/PythonTutorial_by_Guido van Rossum.pdf" },
     { "path": "ebooks/PythonTutorial_tutorialspoint.com.pdf" }
   ],
   "exampapers": [
-    { "path": "ExamPapers/Sessional_1_PaperFormat_BMC301.pdf" },
-    { "path": "ExamPapers/Sessional_2_PaperFormat_BMC301.pdf" },
-    { "path": "ExamPapers/Sessional_3_PaperFormat_BMC301.pdf" },
-    { "path": "ExamPapers/BCC302-PYTHON-PROGRAMMING-23-24.pdf" },
-    { "path": "ExamPapers/PYTHON-PROGRAMMING-KNC-302-1-2020.pdf" },
-    { "path": "ExamPapers/PYTHON-PROGRAMMING-KNC-302-2019.pdf" },
-    { "path": "ExamPapers/PYTHON-PROGRAMMING-KNC402-2021.pdf" },
-    { "path": "ExamPapers/python-programming-knc-402-2022.pdf" }
-  ]
+      ]
 }
