@@ -69,8 +69,8 @@
 <body>
 
 <header>
-  <h1>📘 Machine Learning Repository</h1>
-  <p>:NBCA-601::Machine Learning:BCA 6th Semester:</p>
+  <h1>📘 ML Repository</h1>
+  <p>:NBCA-601::Machine Learning::BCA 6th Semester:</p>
 
   <nav>
     <a href="#syllabus">Syllabus</a>
@@ -335,15 +335,15 @@
   });
   
   async function loadData(force = false) {
-    if (force) localStorage.removeItem("mLNotesData");
-    let data = localStorage.getItem("mLNotesData");
+    if (force) localStorage.removeItem("mlNotesData");
+    let data = localStorage.getItem("mlNotesData");
     if (data) data = JSON.parse(data);
     else {
       try {
         const res = await fetch(rawBase + "data.json" + getCacheBuster(), { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to fetch data.json");
         data = await res.json();
-        try { localStorage.setItem("mLNotesData", JSON.stringify(data)); } catch (e) {}
+        try { localStorage.setItem("mlNotesData", JSON.stringify(data)); } catch (e) {}
       } catch (err) {
         alert("Error loading data: " + err.message);
         return;
