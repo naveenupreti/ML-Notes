@@ -3,32 +3,53 @@
     {
       "path": "Syllabus/BCA3rdYear_NEP_Syllabus.pdf",
       "hidden": false
+    },
+    {
+      "path": "Syllabus/TestFile.txt",
+      "hidden": true
+    },
+    {
+      "path": "Syllabus/Abc.txt",
+      "hidden": true
     }
   ],
   "notes_programs": {
-    "UNIT-1": [
-      
-    ],
-    "UNIT-2": [
-      
-    ],
-    "UNIT-3": [
-      
-    ],
-    "UNIT-4": [
-      
-    ],
-    "UNIT-5": [
-      
-    ]
+    "UNIT-1": [],
+    "UNIT-2": [],
+    "UNIT-3": [],
+    "UNIT-4": [],
+    "UNIT-5": []
   },
-  "assignments": [
-    
-  ],
+  "assignments": [],
   "ebooks": [
-    
+    {
+      "path": "ebooks/Ethem Alpaydin-Introduction to Machine Learning-The MIT Press (2014)_compressed.pdf",
+      "hidden": true
+    },
+    {
+      "path": "ebooks/Machine-Learning-Tom-Mitchell_compressed.pdf",
+      "hidden": true
+    },
+    {
+      "path": "ebooks/Ian Goodfellow, Yoshua Bengio, Aaron Courville - Deep Learning (2017, MIT)_compressed.pdf",
+      "hidden": true
+    },
+    {
+      "path": "ebooks/DSML.pdf",
+      "hidden": true
+    },
+    {
+      "path": "ebooks/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-Tensorflow_-Concepts-Tools-and-Techniques-to-Build-Intelligent-Systems-O\u2019Reilly-Media-2019_Aur\u00e9lien-G\u00e9ron.pdf",
+      "hidden": true
+    },
+    {
+      "path": "ebooks/Deep Learning with Applications Using Python.pdf",
+      "hidden": true
+    },
+    {
+      "path": "ebooks/Introduction to Machine Learning with Python_Oreilly_Andreas C. M\u00fcller & Sarah Guido.pdf",
+      "hidden": true
+    }
   ],
-  "exampapers": [
-    
-  ]
+  "exampapers": []
 }
