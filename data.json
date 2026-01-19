@@ -14,7 +14,12 @@
     }
   ],
   "notes_programs": {
-    "UNIT-1": [],
+    "UNIT-1": [
+      {
+        "path": "Notes_Programs/UNIT-1/Unit 1 Notes.docx",
+        "hidden": false
+      }
+    ],
     "UNIT-2": [],
     "UNIT-3": [],
     "UNIT-4": [],
