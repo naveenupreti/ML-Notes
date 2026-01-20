@@ -1,0 +1,48 @@
+NBCA-601 MACHINE LEARNING SYLLABUS
+NBCA-601 MACHINE LEARNING L T P 
+			  3 1 0
+
+Course Outcomes (COs): After the completion of this course, students will be able to
+
+	Explain the fundamental usage of the concept Machine Learning system
+	
+	Demonstrate on various regression Technique
+	
+	Analyse the Ensemble Learning Methods
+	
+	Illustrate the Clustering Techniques and Dimensionality Reduction Models in Machine Learning.
+	
+	Discuss the Neural Network Models and Fundamentals concepts of Deep Learning
+
+Unit-I (8 Hours) 
+Introduction: Artificial Intelligence, Machine Learning, Types of Machine Learning Systems, Challenges of Machine Learning. Statistical Learning: Introduction, Supervised and Unsupervised Learning, Training and Test Loss, Tradeoffs in Statistical Learning, Estimating Risk Statistics, Sampling distribution of an estimator.
+
+Unit-II (8 Hours) 
+Supervised Learning: Basic Methods: Distance based Methods, Nearest Neighbours, Decision Trees, Naive Bayes, Linear Models: Linear Regression, Logistic Regression, Generalized Linear Models, Support Vector Machines, Binary Classification.
+
+Unit-III (8 Hours)
+Ensemble Learning: Introduction, Voting Classifiers, Bagging and Pasting, Random Forests, Boosting, Stacking. Support Vector Machine: Linear SVM Classification, Nonlinear SVM Classification SVM Regression, and Naïve Bayes Classifiers.
+
+Unit-IV (8 Hours)
+Unsupervised Learning: Clustering, K-Means, Limits of K-Means, Using Clustering for Image Segmentation, Using Clustering for Preprocessing, Using Clustering for Semi-Supervised Learning, DBSCAN, Gaussian Mixtures. Dimensionality Reduction: The Curse of Dimensionality, Main Approaches for Dimensionality Reduction, and PCA.
+
+Unit-V (8 Hours)
+Neural Networks: Introduction to Artificial Neural Networks with Keras, Implementing MLPs with Keras, TensorFlow, Loading and Preprocessing Data with TensorFlow.
+
+Text Books:
+
+Alpaydin, E. 'Introduction to machine learning', MIT press.
+
+Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition, O'Reilly Publications, 2019
+
+Data Science and Machine Learning Mathematical and Statistical Methods, Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman, 25th November 2020
+
+Reference Books:
+
+Mitchell, T.M. 'Machine Learning', McGraw-Hill
+
+Ian Goodfellow, Yoshua Bengio and Aaron Courville, 'Deep Learning', MIT Press.
+
+Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani 'An Introduction to Statistical Learning', Springer.
+
+Machine Learning Probabilistic Approach, Kevin P. Murphy, MIT Press, 2012.
