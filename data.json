@@ -34,6 +34,10 @@
       {
         "path": "Notes_Programs/UNIT-1/AI Learning Pyramid.pdf",
         "hidden": true
+      },
+      {
+        "path": "Notes_Programs/UNIT-1/Bias_Variance_Trade-off.pdf",
+        "hidden": false
       }
     ],
     "UNIT-2": [],
