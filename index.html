@@ -5,360 +5,360 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ML Repository</title>
 <style>
-  html { scroll-padding-top: 100px; }
-  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f7fa; color:#333; font-size:1rem; }
+  html { scroll-padding-top: 100px; }
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f7fa; color:#333; font-size:1rem; }
 
-  /* Header */
-  header { background:#F5F0E1; color:#5D0000; padding:10px; text-align:center; position:sticky; top:0; z-index:1000; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-  header h1 { margin:0; font-size:1.3em; display:inline; color:#800000;}
-  header p { margin:2px 0 0 0; font-size:0.75em; color:#800000;}
+  /* Header */
+  header { background:#2d6cdf; color:white; padding:10px; text-align:center; position:sticky; top:0; z-index:1000; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+  header h1 { margin:0; font-size:1.3em; display:inline; }
+  header p { margin:2px 0 0 0; font-size:0.75em; color:yellow;}
 
-  nav { margin-top:5px; }
-  nav a { color:white; text-decoration:none; margin:0 6px; font-weight:bold; padding:3px 6px; border-radius:4px; transition:0.3s; display:inline-block; margin-bottom:3px; font-size:0.9em; }
-  nav a:hover { text-decoration:underline; color:#ffdd57; }
-  nav a.active { background:#ffdd57; color:#2d6cdf; }
+  nav { margin-top:5px; }
+  nav a { color:white; text-decoration:none; margin:0 6px; font-weight:bold; padding:3px 6px; border-radius:4px; transition:0.3s; display:inline-block; margin-bottom:3px; font-size:0.9em; }
+  nav a:hover { text-decoration:underline; color:#ffdd57; }
+  nav a.active { background:#ffdd57; color:#2d6cdf; }
 
-  /* Controls & Search */
-  #controls { margin-top:8px; display:flex; gap:10px; justify-content:center; align-items:center; flex-wrap:wrap; }
+  /* Controls & Search */
+  #controls { margin-top:8px; display:flex; gap:10px; justify-content:center; align-items:center; flex-wrap:wrap; }
 
-  .search-container { display: flex; gap: 5px; }
-  #searchInput { padding: 6px; border-radius: 4px; border: none; width: 200px; font-size: 0.9em;}
-  #searchBtn, #refreshBtn { background:#ffdd57; color:#2d6cdf; border:none; padding:6px 10px; border-radius:5px; cursor:pointer; font-weight:bold; font-size:0.85em; }
-  #searchBtn:hover, #refreshBtn:hover { background:#ffd633; }
+  .search-container { display: flex; gap: 5px; }
+  #searchInput { padding: 6px; border-radius: 4px; border: none; width: 200px; font-size: 0.9em;}
+  #searchBtn, #refreshBtn { background:#ffdd57; color:#2d6cdf; border:none; padding:6px 10px; border-radius:5px; cursor:pointer; font-weight:bold; font-size:0.85em; }
+  #searchBtn:hover, #refreshBtn:hover { background:#ffd633; }
 
-  /* Section headings */
-  h2 { background:#e8eefc; padding:8px; border-left:4px solid #2d6cdf; margin-top:20px; font-size:1.1em; }
+  /* Section headings */
+  h2 { background:#e8eefc; padding:8px; border-left:4px solid #2d6cdf; margin-top:20px; font-size:1.1em; }
 
-  /* Lists */
-  ul { list-style-type: none; padding-left: 0; }
-  li { margin:4px 0; padding:4px 8px; word-break:break-word; display:block; font-size:0.95em; }
-  .actions { float:right; }
+  /* Lists */
+  ul { list-style-type: none; padding-left: 0; }
+  li { margin:4px 0; padding:4px 8px; word-break:break-word; display:block; font-size:0.95em; }
+  .actions { float:right; }
 
-  /* Collapsible titles */
-  b.unit-title, b.ebook-title, b.syllabus-title, b.exampaper-title, b.assignment-title {
-    cursor:pointer; display:inline-block; color:#2d6cdf; margin:6px 0; padding:3px 6px; text-align:left; font-size:1em; user-select: none;
-  }
-  .collapsible-icon { display:inline-block; width:16px; text-align:center; margin-right:4px; font-weight:bold; }
+  /* Collapsible titles */
+  b.unit-title, b.ebook-title, b.syllabus-title, b.exampaper-title, b.assignment-title {
+    cursor:pointer; display:inline-block; color:#2d6cdf; margin:6px 0; padding:3px 6px; text-align:left; font-size:1em; user-select: none;
+  }
+  .collapsible-icon { display:inline-block; width:16px; text-align:center; margin-right:4px; font-weight:bold; }
 
-  a { text-decoration:none; color:#1a4bb7; font-weight:500; }
-  a:hover { text-decoration:underline; color:#d35400; }
+  a { text-decoration:none; color:#1a4bb7; font-weight:500; }
+  a:hover { text-decoration:underline; color:#d35400; }
 
-  .download { background:#2d6cdf; color:white; padding:2px 6px; border-radius:5px; font-size:0.75em; margin-left:5px; white-space:nowrap; }
-  .download:hover { background:#ff5733; }
+  .download { background:#2d6cdf; color:white; padding:2px 6px; border-radius:5px; font-size:0.75em; margin-left:5px; white-space:nowrap; }
+  .download:hover { background:#ff5733; }
 
-  /* Collapsible content */
-  .unit-content { margin-left:15px; margin-top:3px; display:none; }
+  /* Collapsible content */
+  .unit-content { margin-left:15px; margin-top:3px; display:none; }
 
-  /* Search Highlighting */
-  .highlight { background-color: white; font-weight: bold; }
+  /* Search Highlighting */
+  .highlight { background-color: yellow; font-weight: bold; }
 
-  /* Container */
-  .container { max-width:960px; width:95%; margin:auto; padding:15px; background:white; box-shadow:0 0 10px rgba(0,0,0,0.1); border-radius:8px; margin-top: 10px; }
+  /* Container */
+  .container { max-width:960px; width:95%; margin:auto; padding:15px; background:white; box-shadow:0 0 10px rgba(0,0,0,0.1); border-radius:8px; margin-top: 10px; }
 
-  /* Footer */
-  footer { text-align:center; padding:10px; margin-top:20px; background:#2d6cdf; color:white; font-size:0.8em; }
+  /* Footer */
+  footer { text-align:center; padding:10px; margin-top:20px; background:#2d6cdf; color:white; font-size:0.8em; }
 
-  @media(max-width:600px){
-    nav a { margin:2px 1px; padding:3px 4px; font-size:0.75em; }
-    .container { padding:10px; }
-    #controls { flex-direction:column; }
-    #searchInput { width: 100%; box-sizing: border-box; }
-  }
+  @media(max-width:600px){
+    nav a { margin:2px 1px; padding:3px 4px; font-size:0.75em; }
+    .container { padding:10px; }
+    #controls { flex-direction:column; }
+    #searchInput { width: 100%; box-sizing: border-box; }
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>📘 ML Repository</h1>
-  <p>:NBCA-601::Machine Learning::BCA 6th Semester:</p>
+  <h1>📘 ML Repository</h1>
+  <p>:NBCA-601::Machine Learning::BCA 6th Semester:</p>
 
-  <nav>
-    <a href="#syllabus">Syllabus</a>
-    <a href="#notes_programs">Notes_Programs</a>
-    <a href="#assignments">Assignments</a>
-    <a href="#ebooks">Ebooks</a>
-    <a href="#exampapers">ExamPapers</a>
-  </nav>
+  <nav>
+    <a href="#syllabus">Syllabus</a>
+    <a href="#notes_programs">Notes_Programs</a>
+    <a href="#assignments">Assignments</a>
+    <a href="#ebooks">Ebooks</a>
+    <a href="#exampapers">ExamPapers</a>
+  </nav>
 
-  <div id="controls">
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search files...">
-        <button id="searchBtn">🔍</button>
-    </div>
-    <button id="refreshBtn">🔄 Refresh Data</button>
-  </div>
+  <div id="controls">
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search files...">
+        <button id="searchBtn">🔍</button>
+    </div>
+    <button id="refreshBtn">🔄 Refresh Data</button>
+  </div>
 </header>
 
 <div class="container">
-  <div id="search-status" style="display:none; padding:10px; color:#666; font-style:italic;"></div>
+  <div id="search-status" style="display:none; padding:10px; color:#666; font-style:italic;"></div>
 
-  <h2 id="syllabus">Syllabus</h2>
-  <div id="syllabus-list"></div>
+  <h2 id="syllabus">Syllabus</h2>
+  <div id="syllabus-list"></div>
 
-  <h2 id="notes_programs">Notes_Programs</h2>
-  <div id="notes_programs-list"></div>
+  <h2 id="notes_programs">Notes_Programs</h2>
+  <div id="notes_programs-list"></div>
 
-  <h2 id="assignments">Assignments</h2>
-  <div id="assignments-list"></div>
+  <h2 id="assignments">Assignments</h2>
+  <div id="assignments-list"></div>
 
-  <h2 id="ebooks">Ebooks</h2>
-  <div id="ebooks-list"></div>
+  <h2 id="ebooks">Ebooks</h2>
+  <div id="ebooks-list"></div>
 
-  <h2 id="exampapers">ExamPapers</h2>
-  <div id="exampapers-list"></div>
+  <h2 id="exampapers">ExamPapers</h2>
+  <div id="exampapers-list"></div>
 </div>
 
 <footer>
-  Developed & Maintained by Naveen Upreti | 2025
+  Developed & Maintained by Naveen Upreti | 2025
 </footer>
 <script>
-  const rawBase = "https://raw.githubusercontent.com/naveenupreti/ML-Notes/main/";
-  
-  // Cache-buster
-  function getCacheBuster() { return "?v=" + new Date().getTime(); }
-  
-  function normalizeFileEntry(entry) {
-    if (typeof entry === "string") return { path: entry };
-    if (typeof entry === "object" && entry !== null) return entry;
-    return null;
-  }
-  
-  function createIcon() {
-    const icon = document.createElement("span");
-    icon.className = "collapsible-icon";
-    icon.textContent = "+";
-    return icon;
-  }
-  
-  // Helper to toggle visibility
-  function toggleSection(ul, icon, forceOpen = false) {
-    if (forceOpen) {
-      ul.style.display = "block";
-      icon.textContent = "−";
-    } else {
-      const isHidden = ul.style.display === "none" || ul.style.display === "";
-      ul.style.display = isHidden ? "block" : "none";
-      icon.textContent = isHidden ? "−" : "+";
-    }
-  }
-  
-  function renderCollapsibleList(containerId, files, cssClass) {
-    const container = document.getElementById(containerId);
-    container.innerHTML = "";
-    if (!files || files.length === 0) {
-      container.innerHTML = "<p>No files available.</p>";
-      return;
-    }
-  
-    const li = document.createElement("li");
-    const icon = createIcon();
-    li.innerHTML = `<b class="${cssClass}"></b>`;
-    li.querySelector("b").appendChild(icon);
-    li.querySelector("b").appendChild(document.createTextNode(containerId.replace("-list","").toUpperCase()));
-  
-    const ul = document.createElement("ul");
-    ul.className = "unit-content";
-    ul.style.display = "none";
-  
-    const cacheBuster = getCacheBuster();
-    files.forEach(f => {
-      const fileObj = normalizeFileEntry(f);
-      if (!fileObj || fileObj.hidden) return;
-      const filePath = rawBase + fileObj.path + cacheBuster;
-      const fileName = fileObj.title || fileObj.path.split("/").pop();
-      const liFile = document.createElement("li");
-      liFile.className = "file-item"; 
-      liFile.innerHTML = `<a href="${filePath}" target="_blank" rel="noopener">${fileName}</a>
-        <span class="actions">
-          <a class="download" href="${filePath}" download>Download</a>
-        </span>`;
-      ul.appendChild(liFile);
-    });
-  
-    li.appendChild(ul);
-    container.appendChild(li);
-    li.querySelector("b").addEventListener("click", () => toggleSection(ul, icon));
-  }
-  
-  function renderNotesPrograms(containerId, unitsObj) {
-    const container = document.getElementById(containerId);
-    container.innerHTML = "";
-    if (!unitsObj || Object.keys(unitsObj).length === 0) {
-      container.innerHTML = "<p>No data available.</p>";
-      return;
-    }
-  
-    const liOuter = document.createElement("li");
-    const iconOuter = createIcon();
-    liOuter.innerHTML = `<b class="unit-title"></b>`;
-    liOuter.querySelector("b").appendChild(iconOuter);
-    liOuter.querySelector("b").appendChild(document.createTextNode("Notes_Programs"));
-  
-    const ulOuter = document.createElement("ul");
-    ulOuter.className = "unit-content";
-    ulOuter.style.display = "none";
-  
-    for (const [unitName, files] of Object.entries(unitsObj)) {
-      const li = document.createElement("li");
-      const icon = createIcon();
-      li.innerHTML = `<b class="unit-title"></b>`;
-      li.querySelector("b").appendChild(icon);
-      li.querySelector("b").appendChild(document.createTextNode(unitName));
-  
-      const ul = document.createElement("ul");
-      ul.className = "unit-content";
-      ul.style.display = "none";
-  
-      const cacheBuster = getCacheBuster();
-      files.forEach(f => {
-        const fileObj = normalizeFileEntry(f);
-        if (!fileObj || fileObj.hidden) return;
-        const filePath = rawBase + fileObj.path + cacheBuster;
-        const fileName = fileObj.title || fileObj.path.split("/").pop();
-        const liFile = document.createElement("li");
-        liFile.className = "file-item"; 
-        liFile.innerHTML = `<a href="${filePath}" target="_blank" rel="noopener">${fileName}</a>
-          <span class="actions">
-            <a class="download" href="${filePath}" download>Download</a>
-          </span>`;
-        ul.appendChild(liFile);
-      });
-  
-      li.appendChild(ul);
-      ulOuter.appendChild(li);
-      li.querySelector("b").addEventListener("click", () => toggleSection(ul, icon));
-    }
-  
-    liOuter.appendChild(ulOuter);
-    container.appendChild(liOuter);
-    liOuter.querySelector("b").addEventListener("click", () => toggleSection(ulOuter, iconOuter));
-  }
-  
-  // --- SOPHISTICATED SEARCH LOGIC ---
-  
-  // Helper: Converts "data*.c" into a valid Regex
-  function createGlobRegex(pattern) {
-    // 1. Escape special characters (except *)
-    // We escape . + ? ^ $ ( ) { } [ ] \ |
-    let escaped = pattern.replace(/[.+?^${}()|[\]\\]/g, '\\$&');
-    
-    // 2. Convert * to .* (wildcard matching)
-    escaped = escaped.replace(/\*/g, '.*');
-    
-    // 3. Create case-insensitive regex
-    return new RegExp(escaped, 'i'); 
-  }
-  
-  function performSearch() {
-    const input = document.getElementById("searchInput");
-    const filter = input.value.trim(); // Trim spaces
-    const fileItems = document.querySelectorAll(".file-item");
-    const statusDiv = document.getElementById("search-status");
-    
-    let matchCount = 0;
-  
-    // Clear if empty
-    if (!filter) {
-      fileItems.forEach(item => {
-          item.style.display = "";
-          const link = item.querySelector("a");
-          link.innerHTML = link.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/gi, "$1");
-      });
-      // Optional: Collapse all
-      document.querySelectorAll(".unit-content").forEach(ul => ul.style.display = "none");
-      document.querySelectorAll(".collapsible-icon").forEach(icon => icon.textContent = "+");
-      statusDiv.style.display = "none";
-      return;
-    }
-  
-    // Determine Mode: Wildcard or Normal
-    const isWildcard = filter.includes("*");
-    let regex;
-  
-    if (isWildcard) {
-        regex = createGlobRegex(filter);
-    } else {
-        // Normal search: Escape everything to be safe
-        regex = new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
-    }
-  
-    fileItems.forEach(item => {
-      const link = item.querySelector("a");
-      const fileName = link.textContent;
-  
-      // Reset old highlights
-      link.innerHTML = link.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/gi, "$1");
-  
-      if (regex.test(fileName)) {
-          item.style.display = "";
-          matchCount++;
-          
-          if (isWildcard) {
-              // In wildcard mode, highlight the WHOLE filename to show it matched the pattern
-              link.innerHTML = `<span class="highlight">${fileName}</span>`;
-          } else {
-              // In normal mode, highlight just the matching part
-              const match = fileName.match(regex);
-              if (match) {
-                  // We use original casing from filename, wrapped in highlight
-                  link.innerHTML = fileName.replace(regex, (m) => `<span class="highlight">${m}</span>`);
-              }
-          }
-  
-          // Expand Parents
-          let parent = item.parentElement;
-          while (parent) {
-              if (parent.classList.contains("unit-content")) {
-                  parent.style.display = "block";
-                  const siblingTitle = parent.previousElementSibling; 
-                  if(siblingTitle && siblingTitle.tagName === 'B') {
-                      const icon = siblingTitle.querySelector(".collapsible-icon");
-                      if(icon) icon.textContent = "−";
-                  }
-              }
-              parent = parent.parentElement;
-              if (parent.classList.contains("container")) break;
-          }
-      } else {
-          item.style.display = "none";
-      }
-    });
-  
-    statusDiv.style.display = "block";
-    statusDiv.textContent = matchCount > 0 ? `Found ${matchCount} matches.` : "No matches found.";
-  }
-  
-  document.getElementById("searchBtn").addEventListener("click", performSearch);
-  document.getElementById("searchInput").addEventListener("keyup", (e) => {
-      if (e.key === "Enter") performSearch();
-      // performSearch(); // Uncomment for instant search
-  });
-  
-  async function loadData(force = false) {
-    if (force) localStorage.removeItem("mlNotesData");
-    let data = localStorage.getItem("mlNotesData");
-    if (data) data = JSON.parse(data);
-    else {
-      try {
-        const res = await fetch(rawBase + "data.json" + getCacheBuster(), { cache: "no-store" });
-        if (!res.ok) throw new Error("Failed to fetch data.json");
-        data = await res.json();
-        try { localStorage.setItem("mlNotesData", JSON.stringify(data)); } catch (e) {}
-      } catch (err) {
-        alert("Error loading data: " + err.message);
-        return;
-      }
-    }
-    renderCollapsibleList("syllabus-list", data.syllabus, "syllabus-title");
-    renderNotesPrograms("notes_programs-list", data.notes_programs);
-    renderCollapsibleList("assignments-list", data.assignments, "assignment-title");
-    renderCollapsibleList("ebooks-list", data.ebooks, "ebook-title");
-    renderCollapsibleList("exampapers-list", data.exampapers, "exampaper-title");
-  }
-  
-  document.getElementById("refreshBtn").addEventListener("click", () => loadData(true));
-  loadData(false);
+  const rawBase = "https://raw.githubusercontent.com/naveenupreti/ML-Notes/main/";
+  
+  // Cache-buster
+  function getCacheBuster() { return "?v=" + new Date().getTime(); }
+  
+  function normalizeFileEntry(entry) {
+    if (typeof entry === "string") return { path: entry };
+    if (typeof entry === "object" && entry !== null) return entry;
+    return null;
+  }
+  
+  function createIcon() {
+    const icon = document.createElement("span");
+    icon.className = "collapsible-icon";
+    icon.textContent = "+";
+    return icon;
+  }
+  
+  // Helper to toggle visibility
+  function toggleSection(ul, icon, forceOpen = false) {
+    if (forceOpen) {
+      ul.style.display = "block";
+      icon.textContent = "−";
+    } else {
+      const isHidden = ul.style.display === "none" || ul.style.display === "";
+      ul.style.display = isHidden ? "block" : "none";
+      icon.textContent = isHidden ? "−" : "+";
+    }
+  }
+  
+  function renderCollapsibleList(containerId, files, cssClass) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = "";
+    if (!files || files.length === 0) {
+      container.innerHTML = "<p>No files available.</p>";
+      return;
+    }
+  
+    const li = document.createElement("li");
+    const icon = createIcon();
+    li.innerHTML = `<b class="${cssClass}"></b>`;
+    li.querySelector("b").appendChild(icon);
+    li.querySelector("b").appendChild(document.createTextNode(containerId.replace("-list","").toUpperCase()));
+  
+    const ul = document.createElement("ul");
+    ul.className = "unit-content";
+    ul.style.display = "none";
+  
+    const cacheBuster = getCacheBuster();
+    files.forEach(f => {
+      const fileObj = normalizeFileEntry(f);
+      if (!fileObj || fileObj.hidden) return;
+      const filePath = rawBase + fileObj.path + cacheBuster;
+      const fileName = fileObj.title || fileObj.path.split("/").pop();
+      const liFile = document.createElement("li");
+      liFile.className = "file-item"; 
+      liFile.innerHTML = `<a href="${filePath}" target="_blank" rel="noopener">${fileName}</a>
+        <span class="actions">
+          <a class="download" href="${filePath}" download>Download</a>
+        </span>`;
+      ul.appendChild(liFile);
+    });
+  
+    li.appendChild(ul);
+    container.appendChild(li);
+    li.querySelector("b").addEventListener("click", () => toggleSection(ul, icon));
+  }
+  
+  function renderNotesPrograms(containerId, unitsObj) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = "";
+    if (!unitsObj || Object.keys(unitsObj).length === 0) {
+      container.innerHTML = "<p>No data available.</p>";
+      return;
+    }
+  
+    const liOuter = document.createElement("li");
+    const iconOuter = createIcon();
+    liOuter.innerHTML = `<b class="unit-title"></b>`;
+    liOuter.querySelector("b").appendChild(iconOuter);
+    liOuter.querySelector("b").appendChild(document.createTextNode("Notes_Programs"));
+  
+    const ulOuter = document.createElement("ul");
+    ulOuter.className = "unit-content";
+    ulOuter.style.display = "none";
+  
+    for (const [unitName, files] of Object.entries(unitsObj)) {
+      const li = document.createElement("li");
+      const icon = createIcon();
+      li.innerHTML = `<b class="unit-title"></b>`;
+      li.querySelector("b").appendChild(icon);
+      li.querySelector("b").appendChild(document.createTextNode(unitName));
+  
+      const ul = document.createElement("ul");
+      ul.className = "unit-content";
+      ul.style.display = "none";
+  
+      const cacheBuster = getCacheBuster();
+      files.forEach(f => {
+        const fileObj = normalizeFileEntry(f);
+        if (!fileObj || fileObj.hidden) return;
+        const filePath = rawBase + fileObj.path + cacheBuster;
+        const fileName = fileObj.title || fileObj.path.split("/").pop();
+        const liFile = document.createElement("li");
+        liFile.className = "file-item"; 
+        liFile.innerHTML = `<a href="${filePath}" target="_blank" rel="noopener">${fileName}</a>
+          <span class="actions">
+            <a class="download" href="${filePath}" download>Download</a>
+          </span>`;
+        ul.appendChild(liFile);
+      });
+  
+      li.appendChild(ul);
+      ulOuter.appendChild(li);
+      li.querySelector("b").addEventListener("click", () => toggleSection(ul, icon));
+    }
+  
+    liOuter.appendChild(ulOuter);
+    container.appendChild(liOuter);
+    liOuter.querySelector("b").addEventListener("click", () => toggleSection(ulOuter, iconOuter));
+  }
+  
+  // --- SOPHISTICATED SEARCH LOGIC ---
+  
+  // Helper: Converts "data*.c" into a valid Regex
+  function createGlobRegex(pattern) {
+    // 1. Escape special characters (except *)
+    // We escape . + ? ^ $ ( ) { } [ ] \ |
+    let escaped = pattern.replace(/[.+?^${}()|[\]\\]/g, '\\$&');
+    
+    // 2. Convert * to .* (wildcard matching)
+    escaped = escaped.replace(/\*/g, '.*');
+    
+    // 3. Create case-insensitive regex
+    return new RegExp(escaped, 'i'); 
+  }
+  
+  function performSearch() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.trim(); // Trim spaces
+    const fileItems = document.querySelectorAll(".file-item");
+    const statusDiv = document.getElementById("search-status");
+    
+    let matchCount = 0;
+  
+    // Clear if empty
+    if (!filter) {
+      fileItems.forEach(item => {
+          item.style.display = "";
+          const link = item.querySelector("a");
+          link.innerHTML = link.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/gi, "$1");
+      });
+      // Optional: Collapse all
+      document.querySelectorAll(".unit-content").forEach(ul => ul.style.display = "none");
+      document.querySelectorAll(".collapsible-icon").forEach(icon => icon.textContent = "+");
+      statusDiv.style.display = "none";
+      return;
+    }
+  
+    // Determine Mode: Wildcard or Normal
+    const isWildcard = filter.includes("*");
+    let regex;
+  
+    if (isWildcard) {
+        regex = createGlobRegex(filter);
+    } else {
+        // Normal search: Escape everything to be safe
+        regex = new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+    }
+  
+    fileItems.forEach(item => {
+      const link = item.querySelector("a");
+      const fileName = link.textContent;
+  
+      // Reset old highlights
+      link.innerHTML = link.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/gi, "$1");
+  
+      if (regex.test(fileName)) {
+          item.style.display = "";
+          matchCount++;
+          
+          if (isWildcard) {
+              // In wildcard mode, highlight the WHOLE filename to show it matched the pattern
+              link.innerHTML = `<span class="highlight">${fileName}</span>`;
+          } else {
+              // In normal mode, highlight just the matching part
+              const match = fileName.match(regex);
+              if (match) {
+                  // We use original casing from filename, wrapped in highlight
+                  link.innerHTML = fileName.replace(regex, (m) => `<span class="highlight">${m}</span>`);
+              }
+          }
+  
+          // Expand Parents
+          let parent = item.parentElement;
+          while (parent) {
+              if (parent.classList.contains("unit-content")) {
+                  parent.style.display = "block";
+                  const siblingTitle = parent.previousElementSibling; 
+                  if(siblingTitle && siblingTitle.tagName === 'B') {
+                      const icon = siblingTitle.querySelector(".collapsible-icon");
+                      if(icon) icon.textContent = "−";
+                  }
+              }
+              parent = parent.parentElement;
+              if (parent.classList.contains("container")) break;
+          }
+      } else {
+          item.style.display = "none";
+      }
+    });
+  
+    statusDiv.style.display = "block";
+    statusDiv.textContent = matchCount > 0 ? `Found ${matchCount} matches.` : "No matches found.";
+  }
+  
+  document.getElementById("searchBtn").addEventListener("click", performSearch);
+  document.getElementById("searchInput").addEventListener("keyup", (e) => {
+      if (e.key === "Enter") performSearch();
+      // performSearch(); // Uncomment for instant search
+  });
+  
+  async function loadData(force = false) {
+    if (force) localStorage.removeItem("mlNotesData");
+    let data = localStorage.getItem("mlNotesData");
+    if (data) data = JSON.parse(data);
+    else {
+      try {
+        const res = await fetch(rawBase + "data.json" + getCacheBuster(), { cache: "no-store" });
+        if (!res.ok) throw new Error("Failed to fetch data.json");
+        data = await res.json();
+        try { localStorage.setItem("mlNotesData", JSON.stringify(data)); } catch (e) {}
+      } catch (err) {
+        alert("Error loading data: " + err.message);
+        return;
+      }
+    }
+    renderCollapsibleList("syllabus-list", data.syllabus, "syllabus-title");
+    renderNotesPrograms("notes_programs-list", data.notes_programs);
+    renderCollapsibleList("assignments-list", data.assignments, "assignment-title");
+    renderCollapsibleList("ebooks-list", data.ebooks, "ebook-title");
+    renderCollapsibleList("exampapers-list", data.exampapers, "exampaper-title");
+  }
+  
+  document.getElementById("refreshBtn").addEventListener("click", () => loadData(true));
+  loadData(false);
 </script>
 
 </body>
-</html>
+</html> 
